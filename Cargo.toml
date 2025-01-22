@@ -33,6 +33,8 @@ prettyplease = { version = "0.2.25", optional = true }
 bindgen = { version = "0.70.1", optional = true }
 cmake = { version = "0.1.51", optional = true }
 
+[build]
+rustflags = ["-C", "link-args=-lc++"]
 
 [target.'cfg(windows)'.build-dependencies]
 vcpkg = "0.2"
